@@ -16,7 +16,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("b", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("b", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["left_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -26,7 +26,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("f", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("f", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -36,7 +36,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("n", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("n", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["down_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -46,7 +46,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("p", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("p", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["up_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -61,7 +61,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("b", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("b", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["left_arrow"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -70,7 +70,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("f", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("f", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -79,7 +79,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("n", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("n", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["down_arrow"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -88,7 +88,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("p", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("p", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["up_arrow"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -108,7 +108,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("a", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("a", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["left_arrow", ["left_shift", "left_command"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -118,7 +118,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("e", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("e", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow", ["left_shift", "left_command"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -133,7 +133,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("a", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("a", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["left_arrow", ["left_command"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -142,7 +142,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("e", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("e", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow", ["left_command"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -162,7 +162,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("v", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("v", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["page_down", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -177,7 +177,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("v", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("v", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["page_down"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -197,7 +197,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("v", ["option"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("v", ["option"], ["caps_lock"]) %>,
                     "to": <%= to([["page_up", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -212,7 +212,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("v", ["option"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("v", ["option"], ["caps_lock"]) %>,
                     "to": <%= to([["page_up"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -231,7 +231,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("v", ["command"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("v", ["command"], ["caps_lock"]) %>,
                     "to": <%= to([["page_up", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -246,7 +246,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("v", ["command"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("v", ["command"], ["caps_lock"]) %>,
                     "to": <%= to([["page_up"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -266,7 +266,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("w", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("w", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["x", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -283,7 +283,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("w", ["option"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("w", ["option"], ["caps_lock"]) %>,
                     "to": <%= to([["c", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -300,7 +300,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("w", ["command"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("w", ["command"], ["caps_lock"]) %>,
                     "to": <%= to([["c", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -317,7 +317,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("y", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("y", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["v", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -334,7 +334,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("slash", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("slash", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["z", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -351,7 +351,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("k", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("k", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow", ["left_command", "left_shift"]], ["x", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -373,7 +373,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("d", ["control"], ["caps_lock", "option"]) %>,
+                    "from": <%= from("d", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["delete_forward"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -387,7 +387,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("h", ["control"], ["caps_lock", "option"]) %>,
+                    "from": <%= from("h", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["delete_or_backspace"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -415,7 +415,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("m", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "from": <%= from("m", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["return_or_enter"]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -434,7 +434,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("s", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("s", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["f", ["left_command"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -454,7 +454,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("x", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("x", ["control"], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 1 } }
                     ],
@@ -466,7 +466,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("x", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("x", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["x", ["left_control"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
@@ -483,7 +483,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("g", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("g", ["control"], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } },
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -494,7 +494,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("escape", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("escape", [], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
                     ],
@@ -511,7 +511,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("s", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("s", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["s", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
@@ -528,7 +528,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("f", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("f", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["o", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
@@ -545,7 +545,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("u", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("u", [], ["caps_lock"]) %>,
                     "to": <%= to([["z", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
@@ -562,7 +562,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("k", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("k", [], ["caps_lock"]) %>,
                     "to": <%= to([["w", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
@@ -579,7 +579,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("c", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("c", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["q", ["left_command"]]]) %>,
                     "to_after_key_up": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
@@ -601,7 +601,7 @@
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": <%= from("spacebar", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("spacebar", ["control"], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 1 } }
                     ],
@@ -613,7 +613,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("spacebar", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("spacebar", ["control"], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_cx", "value": 0 } },
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
@@ -630,7 +630,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("g", ["control"], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("g", ["control"], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
                     ],
@@ -640,7 +640,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("escape", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("escape", [], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
                     ],
@@ -652,7 +652,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("delete_or_backspace", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("delete_or_backspace", [], ["caps_lock"]) %>,
                     "to": [
                         { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
                     ],
@@ -669,7 +669,7 @@
 
                 {
                     "type": "basic",
-                    "from": <%= from("left_arrow", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("left_arrow", [], ["caps_lock"]) %>,
                     "to": <%= to([["left_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -678,7 +678,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("right_arrow", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("right_arrow", [], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -687,7 +687,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("down_arrow", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("down_arrow", [], ["caps_lock"]) %>,
                     "to": <%= to([["down_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -696,7 +696,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("up_arrow", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("up_arrow", [], ["caps_lock"]) %>,
                     "to": <%= to([["up_arrow", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -705,7 +705,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("home", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("home", [], ["caps_lock"]) %>,
                     "to": <%= to([["home", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -714,7 +714,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("end", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("end", [], ["caps_lock"]) %>,
                     "to": <%= to([["end", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -723,7 +723,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("page_down", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("page_down", [], ["caps_lock"]) %>,
                     "to": <%= to([["page_down", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
@@ -732,7 +732,7 @@
                 },
                 {
                     "type": "basic",
-                    "from": <%= from("page_up", [], ["caps_lock", "shift"]) %>,
+                    "from": <%= from("page_up", [], ["caps_lock"]) %>,
                     "to": <%= to([["page_up", ["left_shift"]]]) %>,
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,

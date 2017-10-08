@@ -13,9 +13,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -88,9 +86,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -163,9 +159,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -238,9 +232,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -313,9 +305,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -380,9 +370,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -447,9 +435,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -514,9 +500,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -586,8 +570,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -661,8 +644,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -736,8 +718,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -805,8 +786,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -879,8 +859,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -953,8 +932,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1024,8 +1002,7 @@
                 "option"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1098,8 +1075,7 @@
                 "option"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1169,8 +1145,7 @@
                 "command"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1243,8 +1218,7 @@
                 "command"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1314,8 +1288,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1396,8 +1369,7 @@
                 "option"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1478,8 +1450,7 @@
                 "command"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1560,8 +1531,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1642,8 +1612,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1724,8 +1693,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -1813,8 +1781,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -1884,8 +1851,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -2025,9 +1991,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift",
-                "option"
+                "caps_lock"
               ]
             }
           },
@@ -2097,8 +2061,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2171,8 +2134,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2245,8 +2207,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2322,8 +2283,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2389,8 +2349,7 @@
             "key_code": "escape",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2463,8 +2422,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2545,8 +2503,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2624,8 +2581,7 @@
             "key_code": "u",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2703,8 +2659,7 @@
             "key_code": "k",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2785,8 +2740,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2867,8 +2821,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -2941,8 +2894,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3016,8 +2968,7 @@
                 "control"
               ],
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3077,8 +3028,7 @@
             "key_code": "escape",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3148,8 +3098,7 @@
             "key_code": "delete_or_backspace",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3219,8 +3168,7 @@
             "key_code": "left_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3285,8 +3233,7 @@
             "key_code": "right_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3351,8 +3298,7 @@
             "key_code": "down_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3417,8 +3363,7 @@
             "key_code": "up_arrow",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3483,8 +3428,7 @@
             "key_code": "home",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3549,8 +3493,7 @@
             "key_code": "end",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3615,8 +3558,7 @@
             "key_code": "page_down",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
@@ -3681,8 +3623,7 @@
             "key_code": "page_up",
             "modifiers": {
               "optional": [
-                "caps_lock",
-                "shift"
+                "caps_lock"
               ]
             }
           },
