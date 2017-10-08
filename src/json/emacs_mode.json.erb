@@ -1,0 +1,745 @@
+{
+    "title": "Emacs Mode",
+    "rules": [
+
+        <%# -------------------------------------------------- %>
+        <%# Cursor Move / Page Scroll                          %>
+        <%# -------------------------------------------------- %>
+
+        {
+            "description": "[Emacs Mode] Control+PNBF to Up/Down/Left/Right",
+            "manipulators": [
+
+                <%# -------------------------------------------------- %>
+                <%# for Mark Set                                       %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("b", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["left_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("f", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["right_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("n", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["down_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("p", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["up_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# for Normal                                         %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("b", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["left_arrow"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("f", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["right_arrow"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("n", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["down_arrow"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("p", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["up_arrow"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+AE to Command+Left/Right",
+            "manipulators": [
+
+                <%# -------------------------------------------------- %>
+                <%# for Mark Set                                       %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("a", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["left_arrow", ["left_shift", "left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("e", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["right_arrow", ["left_shift", "left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# for Normal                                         %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("a", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["left_arrow", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("e", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["right_arrow", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+V to PageDown",
+            "manipulators": [
+
+                <%# -------------------------------------------------- %>
+                <%# for Mark Set                                       %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_down", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# for Normal                                         %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_down"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Option+V to PageUp",
+            "manipulators": [
+
+                <%# -------------------------------------------------- %>
+                <%# for Mark Set                                       %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["option"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_up", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# for Normal                                         %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["option"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_up"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Command+V to PageUp",
+            "manipulators": [
+
+                <%# -------------------------------------------------- %>
+                <%# for Mark Set                                       %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["command"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_up", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# for Normal                                         %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["command"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_up"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+
+            ]
+        },
+
+        <%# -------------------------------------------------- %>
+        <%# Cut & Paste / Undo                                 %>
+        <%# -------------------------------------------------- %>
+
+        {
+            "description": "[Emacs Mode] Control+W to Command+X",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("w", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["x", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Option+W to Command+C",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("w", ["option"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["c", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Command+W to Command+C",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("w", ["command"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["c", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+Y to Command+V",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("y", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["v", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+/ to Command+Z",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("slash", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["z", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+K to Command+Shift+Right,Command+X",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("k", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["right_arrow", ["left_command", "left_shift"]], ["x", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+
+        <%# -------------------------------------------------- %>
+        <%# Edit                                               %>
+        <%# -------------------------------------------------- %>
+
+        {
+            "description": "[Emacs Mode] Control+D to Forward Delete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("d", ["control"], ["caps_lock", "option"]) %>,
+                    "to": <%= to([["delete_forward"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+H to Delete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("h", ["control"], ["caps_lock", "option"]) %>,
+                    "to": <%= to([["delete_or_backspace"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+[ to Escape",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("open_bracket", ["control"], ["caps_lock"]) %>,
+                    "to": <%= to([["escape"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode] Control+M to Return",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("m", ["control"], ["caps_lock", "shift", "option"]) %>,
+                    "to": <%= to([["return_or_enter"]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+
+        <%# -------------------------------------------------- %>
+        <%# Find                                               %>
+        <%# -------------------------------------------------- %>
+
+        {
+            "description": "[Emacs Mode] Control+S to Command+F",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("s", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["f", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+
+        <%# -------------------------------------------------- %>
+        <%# C-x Prefix                                         %>
+        <%# -------------------------------------------------- %>
+
+        {
+            "description": "[Emacs Mode] Enable Control+X as prefix key",
+            "manipulators": [
+
+                {
+                    "type": "basic",
+                    "from": <%= from("x", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 1 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 0 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("x", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["x", ["left_control"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                },
+        
+                <%# -------------------------------------------------- %>
+                <%# Exit from C-x prefix mode                          %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("g", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } },
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("escape", [], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "description": "[Emacs Mode|C-x] C-s to Save (Command+S)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("s", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["s", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode|C-x] C-f to Open (Command+O)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("f", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["o", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode|C-x] u to Undo (Command+Z)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("u", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["z", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode|C-x] k to Close (Command+W)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("k", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["w", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[Emacs Mode|C-x] C-c to Quit (Command+Q)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("c", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["q", ["left_command"]]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 1 }
+                    ]
+                }
+            ]
+        },
+
+        <%# -------------------------------------------------- %>
+        <%# Mark Set                                           %>
+        <%# -------------------------------------------------- %>
+
+        {
+            "description": "[Emacs Mode] Enable Control+Space as Mark Set",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("spacebar", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 1 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 0 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("spacebar", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_cx", "value": 0 } },
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# Exit from Mark Set Mode                            %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("g", ["control"], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("escape", [], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("delete_or_backspace", [], ["caps_lock", "shift"]) %>,
+                    "to": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 },
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+
+                <%# -------------------------------------------------- %>
+                <%# Cursor Move / Page Scroll (with selection)         %>
+                <%# -------------------------------------------------- %>
+
+                {
+                    "type": "basic",
+                    "from": <%= from("left_arrow", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["left_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("right_arrow", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["right_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("down_arrow", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["down_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("up_arrow", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["up_arrow", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("home", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["home", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("end", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["end", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("page_down", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_down", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("page_up", [], ["caps_lock", "shift"]) %>,
+                    "to": <%= to([["page_up", ["left_shift"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_markset", "value": 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}
