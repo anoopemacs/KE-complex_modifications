@@ -1,0 +1,56 @@
+{
+    "title": "(Private) MS-Office IME",
+    "rules": [
+
+        {
+            "description": "(Private) [MS-Office IME] Control+Shift+J to japanese_kana",
+            "manipulators": [
+
+                {
+                    "type": "basic",
+                    "from": <%= from("j", ["control","shift"], ["caps_lock"]) %>,
+                    "to": <%= to([["japanese_kana", []]]) %>,
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.Word$",
+                                "^com\\.microsoft\\.Excel$",
+                                "^com\\.microsoft\\.Powerpoint$",
+                                "^com\\.microsoft\\.Outlook$",
+                                "^com\\.microsoft\\.onenote\\.mac$"
+                            ]
+                        }
+                    ]
+                }
+
+            ]
+        },
+
+        {
+            "description": "(Private) [MS-Office IME] Control+Shift+K to japanese_eisuu",
+            "manipulators": [
+
+                {
+                    "type": "basic",
+                    "from": <%= from("k", ["control","shift"], ["caps_lock"]) %>,
+                    "to": <%= to([["japanese_eisuu", []]]) %>,
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.Word$",
+                                "^com\\.microsoft\\.Excel$",
+                                "^com\\.microsoft\\.Powerpoint$",
+                                "^com\\.microsoft\\.Outlook$",
+                                "^com\\.microsoft\\.onenote\\.mac$"
+                            ]
+                        }
+                    ]
+                }
+
+            ]
+        }
+
+    ]
+}

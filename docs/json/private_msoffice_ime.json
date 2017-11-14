@@ -1,0 +1,85 @@
+{
+  "title": "(Private) MS-Office IME",
+  "rules": [
+    {
+      "description": "(Private) [MS-Office IME] Control+Shift+J to japanese_kana",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_kana",
+              "modifiers": [
+
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.Word$",
+                "^com\\.microsoft\\.Excel$",
+                "^com\\.microsoft\\.Powerpoint$",
+                "^com\\.microsoft\\.Outlook$",
+                "^com\\.microsoft\\.onenote\\.mac$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "(Private) [MS-Office IME] Control+Shift+K to japanese_eisuu",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu",
+              "modifiers": [
+
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.Word$",
+                "^com\\.microsoft\\.Excel$",
+                "^com\\.microsoft\\.Powerpoint$",
+                "^com\\.microsoft\\.Outlook$",
+                "^com\\.microsoft\\.onenote\\.mac$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
