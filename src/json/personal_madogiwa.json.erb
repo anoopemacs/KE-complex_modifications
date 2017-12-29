@@ -70,6 +70,55 @@
                 }
 
             ]
+        },
+
+        {
+            "description": "(@madogiwa) Send ESC with japanese_eisuu in Terminal App",
+            "manipulators": [
+
+                {
+                    "type": "basic",
+                    "from": <%= from("escape", [], ["caps_lock"]) %>,
+                    "to": <%= to([["escape", []], ["japanese_eisuu", []]]) %>,
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.apple\\.Terminal$",
+                                "^com\\.googlecode\\.iterm2$"
+                            ]
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                { "language": "^ja$" }
+                            ]
+                        }
+                    ]
+                },
+
+                {
+                    "type": "basic",
+                    "from": <%= from("open_bracket", ["control"], ["caps_lock"]) %>,
+                    "to": <%= to([["open_bracket", ["left_control"]], ["japanese_eisuu", []]]) %>,
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.apple\\.Terminal$",
+                                "^com\\.googlecode\\.iterm2$"
+                            ]
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                { "language": "^ja$" }
+                            ]
+                        }
+                    ]
+                }
+
+            ]
         }
 
     ]
