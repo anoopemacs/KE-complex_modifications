@@ -363,6 +363,24 @@
                 }
             ]
         },
+        {
+            "description": "[Emacs Mode] Control+K to Command+Shift+Right,Forward Delete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("k", ["control"], ["caps_lock"]) %>,
+                    "to": <%= to([["right_arrow", ["left_command", "left_shift"]], ["delete_forward"]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
+                    "conditions": [
+                        <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
+                        { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
+                    ]
+                }
+            ]
+        },
+
 
         <%# -------------------------------------------------- %>
         <%# Edit                                               %>
