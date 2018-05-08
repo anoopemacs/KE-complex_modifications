@@ -3029,6 +3029,12 @@
                 "name": "emacs_mode_markset",
                 "value": 0
               }
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+
+              ]
             }
           ],
           "conditions": [
