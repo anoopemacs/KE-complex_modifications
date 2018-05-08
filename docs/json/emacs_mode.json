@@ -1875,6 +1875,14 @@
               "key_code": "delete_forward"
             }
           ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "emacs_mode_markset",
+                "value": 0
+              }
+            }
+          ],
           "conditions": [
             {
               "type": "frontmost_application_unless",
@@ -1943,6 +1951,14 @@
           "to": [
             {
               "key_code": "delete_or_backspace"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "emacs_mode_markset",
+                "value": 0
+              }
             }
           ],
           "conditions": [
@@ -2091,6 +2107,14 @@
           "to": [
             {
               "key_code": "return_or_enter"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "emacs_mode_markset",
+                "value": 0
+              }
             }
           ],
           "conditions": [

@@ -393,6 +393,9 @@
                     "type": "basic",
                     "from": <%= from("d", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["delete_forward"]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
                         { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
@@ -407,6 +410,9 @@
                     "type": "basic",
                     "from": <%= from("h", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["delete_or_backspace"]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
                         { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
@@ -438,6 +444,9 @@
                     "type": "basic",
                     "from": <%= from("m", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["return_or_enter"]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
                         { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
