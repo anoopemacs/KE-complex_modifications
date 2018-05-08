@@ -2015,6 +2015,14 @@
               "key_code": "escape"
             }
           ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "emacs_mode_markset",
+                "value": 0
+              }
+            }
+          ],
           "conditions": [
             {
               "type": "frontmost_application_unless",

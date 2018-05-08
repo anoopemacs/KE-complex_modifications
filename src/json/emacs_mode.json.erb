@@ -421,6 +421,9 @@
                     "type": "basic",
                     "from": <%= from("open_bracket", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["escape"]]) %>,
+                    "to_after_key_up": [
+                        { "set_variable": { "name": "emacs_mode_markset", "value": 0 } }
+                    ],
                     "conditions": [
                         <%= frontmost_application_unless("emacs_mode_key_bindings_exception") %>,
                         { "type": "variable_if", "name": "emacs_mode_cx", "value": 0 }
