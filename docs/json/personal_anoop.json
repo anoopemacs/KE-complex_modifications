@@ -75,12 +75,12 @@
       ]
     },
     {
-      "description": "[Anoop Emacs Mode|C-x] k to Close = testing purposes to see whether working as expected",
+      "description": "[Anoop Emacs Mode|C-x] b to to Cmd+f20 = Buffer switch using window hints in hammerspoon",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "k",
+            "key_code": "b",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -89,7 +89,7 @@
           },
           "to": [
             {
-              "key_code": "w",
+              "key_code": "f20",
               "modifiers": [
                 "left_command"
               ]
@@ -145,12 +145,12 @@
       ]
     },
     {
-      "description": "[Anoop Emacs Mode|C-x] b to (left_cmd + f20) = hyper-b?? 007",
+      "description": "[Anoop Emacs Mode|C-x] k to Close = testing purposes to see whether working as expected",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "b",
+            "key_code": "k",
             "modifiers": {
               "optional": [
                 "caps_lock"
@@ -159,7 +159,7 @@
           },
           "to": [
             {
-              "key_code": "f20",
+              "key_code": "w",
               "modifiers": [
                 "left_command"
               ]
