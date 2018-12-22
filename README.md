@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/pqrs-org/KE-complex_modifications.svg?branch=master)](https://travis-ci.org/pqrs-org/KE-complex_modifications)
 
+# Clickable link to import latest master into Karabiner-Elements
+
+karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fraw.githubusercontent.com%2Fanoopemacs%2FKE-complex_modifications%2Fmaster%2Fdocs%2Fjson%2Fpersonal_anoop.json
+
 # KE-complex_modifications
 
 complex_modifications for Karabiner-Elements.
